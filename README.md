@@ -1,6 +1,6 @@
 # IEEE NYIT MA Chapter
 <h3> Official website build on Django </h3>
-This is the website created by <a href="https://github.com/denisolt">Denisolt Shakhbulatov</a>
+This is the website created
 for Institute of Electrical and Electronics Engineers at NYIT manhattan campus <br/>
 Website is build on Django, users are capable of adding events to the calendar <br/>
 
