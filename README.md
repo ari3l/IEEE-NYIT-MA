@@ -1,13 +1,8 @@
-# ACM NYIT Chapter
+# IEEE NYIT MA Chapter
 <h3> Official website build on Django </h3>
-This is the website created by the president <a href="https://github.com/denisolt">Denisolt Shakhbulatov</a> and founder <a href="https://github.com/msdocs">Mahmoud Saleh</a>
-of Association for Computing Machinery at NYIT manhattan campus <br/>
-Website is build on Django, users are capable of adding events to the calendar, add blog posts and has a custom form for signup <br/>
-Signedup users are being stored in the DB together with Events and Posts. </br>
-
-Check out the website: <a href="http://acm-nyit.org">acm-nyit.org</a> </br></br>
-![alt tag](https://github.com/Denisolt/acm/blob/master/readmeimage2.png?raw=true)
-![alt tag](https://github.com/Denisolt/acm/blob/master/readmeimage.png?raw=true)
+This is the website created by <a href="https://github.com/denisolt">Denisolt Shakhbulatov</a>
+for Institute of Electrical and Electronics Engineers at NYIT manhattan campus <br/>
+Website is build on Django, users are capable of adding events to the calendar <br/>
 
 Installation
 -----------------------------------------
@@ -31,8 +26,4 @@ By going to the admin page (localhost/admin) and entering superuser login and pa
 Admin can create events, posts, and access the db of signedup users </br>
 Creation of the event:</br>
 ![alt tag](https://github.com/Denisolt/acm/blob/master/page2.png?raw=true)</br>
-Creation of the blog post:</br>
-![alt tag](https://github.com/Denisolt/acm/blob/master/page1.png?raw=true)</br>
-Accessing the db of signed up users:</br>
-![alt tag](https://github.com/Denisolt/acm/blob/master/page3.png?raw=true)</br>
 
