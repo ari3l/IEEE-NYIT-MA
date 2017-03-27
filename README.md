@@ -15,6 +15,7 @@ Adding hosts:
 The website will only run in local host, in order to add a host
 go to /IEEE-NYIT-MA/mysite/settings.py and add a host
 ```
+# /IEEE-NYIT-MA/mysite/settings.py
 ALLOWED_HOSTS = ["127.0.0.1", ""]
 ```
 Configuring and running Django:
