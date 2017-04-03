@@ -78,12 +78,12 @@ DATETIME_FORMAT=[     # '2006-10-25 14:30:59'
      ]
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'USER': '', #the username of the db
-        'PASSWORD': '', #the password of the db
-        'HOST': '', #the host of the db
-        'PORT': '', #the port for your db
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9v9jfoj60qd73',
+        'USER': 'anklxeqblmsoak', #the username of the db
+        'PASSWORD': 'f0cd914e5692dc8fad274dac6cac70658cbaf1b6634872fc6ca6c6c8e7f02fd2', #the password of the db
+        'HOST': 'ec2-23-21-224-106.compute-1.amazonaws.com', #the host of the db
+        'PORT': '5432', #the port for your db
     }
 }
 
