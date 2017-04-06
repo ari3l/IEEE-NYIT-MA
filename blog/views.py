@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .forms import Project
+from .forms import ProjectForm
 
 from .models import Event
 
@@ -13,7 +13,7 @@ def index(request):
 
 def project(request):
     if request.method == "POST":
-        form = Project(request.POST)
+        form = ProjectForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
@@ -21,5 +21,5 @@ def project(request):
             post.save()
             return redirect('/completed')
     else:
-        form = Project()
+        form = ProjectForm()
     return render(request, 'blog/project.html', {'form': form})

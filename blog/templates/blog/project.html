@@ -77,27 +77,23 @@
 			</div>
 		</div>
 
-		<div id="fh5co-about" data-section="about">
+		<div id="fh5co-about" data-section="">
 			<div class="fh5co-2col">
 				
 				<div class="fh5co-2col-inner left">
 						
 						<div class="fh5co-tabs-container">
-							<ul class="fh5co-tabs fh5co-three">
-								<li class="active"><a href="#" data-tab="nyit-ma">IEEE NYIT-MA</a></li>
-								<li><a href="#" data-tab="ieee">IEEE</a></li>
-								<li><a href="#" data-tab="nyit">NYIT</a></li>
-							</ul>
 							<div class="fh5co-tab-content active" data-tab-content="nyit-ma">
-								<h2><strong>NYIT IEEE MA</strong></h2>
-								<p>NYIT IEEE MA is the IEEE student chapter at NYIT Manhattan campus. We are under IEEE Region 1 which is the home to IEEE organizational units in the north-eastern part of the United States.</p>
-								<p>We act as your conduit to give you a glimpse into why you chose to be an engineer. We do that by working on challenging projects and participating in conferences across the country. We don't ask for people to join to just show up, we want colleagues and people who will work with us.</p>
-								<ul class="checked">
-									<li>Workshops</li>
-									<li>Projects</li>
-									<li>Networking</li>
-								</ul>
-								<p><a href="mailto:ieeema@nyit.edu" class="btn btn-primary btn-outline">Get In Touch</a> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB8zjuCoxOTEbiYkCjpMdbxe3OvZj1rKIXrWQAazUoQK9aDw/viewform?usp=sf_link" class="btn btn-primary btn-outline">Register</a></p>
+								<h2><strong>Submit Your Project Idea</strong></h2>
+								
+				{% block content %}
+                   <form method="POST" class="post-form">{% csrf_token %}
+                      {{ form.as_p }}
+                      <button type="submit" class="save btn btn-default">Submit the form</button>
+                      </form>
+                {% endblock %}
+
+
 							</div>
 
 						</div>

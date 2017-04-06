@@ -5,4 +5,4 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ('name', 'major', 'year', 'email', 'title', 'description')
+        fields = ('name', 'email', 'title', 'description')
