@@ -3,11 +3,14 @@ from colorfield.fields import ColorField
 from django.utils import timezone
 # Create your models here.
 
-class User(models.Model):
+class Project(models.Model):
     name = models.CharField(max_length=200)
     major = models.CharField(max_length=200)
     year = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=500)
+
     def publish(self):
         self.save()
     def __str__(self):

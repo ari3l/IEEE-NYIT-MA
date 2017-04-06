@@ -1,8 +1,8 @@
 from django import forms
-from .models import User
+from .models import Project
 
-class UserForm(forms.ModelForm):
+class ProjectForm(forms.ModelForm):
 
     class Meta:
-        model = User
-        fields = ('name', 'major', 'year', 'email',)
+        model = Project
+        fields = ('name', 'major', 'year', 'email', 'title', 'description')
