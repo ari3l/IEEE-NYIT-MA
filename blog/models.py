@@ -7,7 +7,7 @@ class Project(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
     title = models.CharField(max_length=200)
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=3000)
 
     def publish(self):
         self.save()

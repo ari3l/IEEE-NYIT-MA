@@ -93,14 +93,12 @@
 						<div class="fh5co-tabs-container">
 							<div class="fh5co-tab-content active" data-tab-content="nyit-ma">
 								<h2><strong>Submit Your Project Idea</strong></h2>
-								
 				{% block content %}
-                   <form method="POST" class="post-form">{% csrf_token %}
+                   <form method="POST" style="" class="post-form">{% csrf_token %}
                       {{ form.as_p }}
                       <button type="submit" class="save btn btn-default">Submit the form</button>
                       </form>
                 {% endblock %}
-
 							</div>
 
 						</div>
