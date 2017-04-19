@@ -95,7 +95,7 @@
 							<ul class="fh5co-tabs fh5co-three">
 								<li class="active"><a href="#" data-tab="nyit-ma">IEEE NYIT-MA</a></li>
 								<li><a href="#" data-tab="ieee">IEEE</a></li>
-								<li><a href="#" data-tab="news">News</a></li>
+								<li><a href="#" data-tab="nyit">NYIT</a></li>
 							</ul>
 							<div class="fh5co-tab-content active" data-tab-content="nyit-ma">
 								<h2><strong>NYIT IEEE MA</strong></h2>
@@ -118,29 +118,16 @@
 								<p><a href="https://www.ieee.org/index.html" class="btn btn-primary btn-outline">IEEE</a> </p>
 							</div>
 
-							<div class="fh5co-tab-content" data-tab-content="news">
-                     		{% for post in posts %}
-								<div class="post">
-                        	<div class="date"></div>
-								<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                         	{% if post.img %}
-                                <img src={{post.img}}, width="100%">
-                         	{% endif %}
-							</div>	<div>
-                            <p>{{ post.text|linebreaksbr|truncatechars:250 }}</p>
-                             <a class="">
-                             {{ post.published_date }}
-                             </a>
-                             <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-default col-md-offset-9">Read More</a>
-                        {% endfor %}
-						</div></div>
-						<h2><a href="post_list" class="btn btn-default btn-lg">Rest of the Content</a></h2>
-</div></div>
+							<div class="fh5co-tab-content" data-tab-content="nyit">
+								<h2>New York Institute of Technology</h2>
+								<p>A dynamic, highly ranked, and accredited not-for-profit university committed to educating the next generation of leaders, and to inspiring innovation and advancing entrepreneurship.</p>
+								<p>With 12,000 students representing 50 states and 125 countries at campuses around the world become engaged, technologically savvy physicians, architects, scientists, engineers, business leaders, digital artists, health care professionals, and more.</p>
+								<p><a href="https://www.nyit.edu/" class="btn btn-primary btn-outline">NYIT</a></p>
+							</div>
 
-
+						</div>
 
 				</div>
-
 
 			</div>
 			<div class="fh5co-2col fh5co-text">
@@ -203,7 +190,7 @@
 				</div>
 
 				<div class="col-md-12 text-center">
-					<p><a href=/project class="btn btn-primary btn-outline">Have a Project Idea?</a></p>
+					<p><a href="mailto:ieeema@nyit.edu?subject=Project Proposal" class="btn btn-primary btn-outline">Have a Project Idea?</a></p>
 				</div>
 			</div>
 		</div>
