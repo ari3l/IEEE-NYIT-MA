@@ -15,6 +15,7 @@ class Project(models.Model):
         return self.name
 
 
+
 class Event(models.Model):
     title = models.CharField(max_length=200)
     start = models.DateTimeField()
@@ -45,3 +46,13 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class User(models.Model):
+    name = models.CharField(max_length=200)
+    year = models.CharField(max_length=200)
+    email = models.EmailField()
+    graduation = models.DateField()
+    alumni = models.BooleanField()
+    def publish(self):
+        self.save()
+    def __str__(self):
+        return self.name
