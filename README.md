@@ -27,7 +27,7 @@ ALLOWED_HOSTS = ["127.0.0.1", ""]
 ./manage.py runserver
 ```
 ## Capabilities
------------------------------------------
+
 By going to the admin page (localhost/admin) and entering superuser login and password </br>
 Admin can create events, posts, and access the db of signedup users </br>
 Creation of the event:</br>
