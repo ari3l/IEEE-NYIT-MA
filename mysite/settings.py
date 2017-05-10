@@ -31,8 +31,6 @@ ALLOWED_HOSTS = ["127.0.0.1","nyit-ieee.org", "www.nyit-ieee.org"]
 # Application definition
 
 INSTALLED_APPS = [
-    'grappelli',
-    'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
