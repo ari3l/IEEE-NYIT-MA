@@ -25,7 +25,7 @@ SECRET_KEY = 't^_z20!#$wa%dl9z^!2wk+*x_qyout(&z3@2_w2ds_7&lu0w7n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","nyit-ieee.org", "www.nyit-ieee.org"]
+ALLOWED_HOSTS = ["127.0.0.1","nyit-ieee.org", "www.nyit-ieee.org", "nyit-ieee.herokuapp.com"]
 
 
 # Application definition
@@ -86,7 +86,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
