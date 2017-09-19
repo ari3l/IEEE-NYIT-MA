@@ -1,0 +1,123 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IEEE NYIT MA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{% static 'device-mockups/device-mockups.min.css' %}">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/new-age.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'fullcalendar.css' %}" rel='stylesheet' />
+    <link href="{% static 'fullcalendar.print.css'' %}" rel='stylesheet' media='print' />
+    <script src="{% static 'fullcalendar.min.js' %}"></script>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/"><strong>IEEE NYIT MA</strong></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">about/blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">calendar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="download bg-primary text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2>Blog</h2>
+            {% for post in posts %}
+            <h1 style = "float: left;" class="section-heading">{{ post.title }}</h1>
+                  </br> </br>
+            <p style= "float: left;" >{{ post.text|linebreaksbr|truncatechars:450 }}</p>
+              <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline btn-sm" style="float: right;">Read the post</a>
+              </br></br></br></br>
+                  </br></br>
+              {% endfor %}
+            </br></br></br></br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; IEEE NYIT MA. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="https://t.me/nyit_ieee">Telegram</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:ieeema@nyit.edu">Email</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/ieee.nyit_ma/">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js'></script>
+
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>
+<script class="cssdesk" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.0/fullcalendar.min.js" type="text/javascript"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/new-age.min.js' %}"></script>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+
+</html>
