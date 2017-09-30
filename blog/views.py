@@ -37,6 +37,9 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+def team(request):
+    return render(request, 'blog/team.html')
+
 
 def signup(request):
     if request.method == "POST":
