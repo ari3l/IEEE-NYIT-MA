@@ -25,7 +25,7 @@ SECRET_KEY = 't^_z20!#$wa%dl9z^!2wk+*x_qyout(&z3@2_w2ds_7&lu0w7n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","nyit-ieee.org", "www.nyit-ieee.org", "ieeema.herokuapp.com"]
+ALLOWED_HOSTS = ["127.0.0.1","ieeenyit.org", "www.ieeenyit.org"]
 
 
 # Application definition
@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9v9jfoj60qd73',
-        'USER': 'anklxeqblmsoak',
-        'PASSWORD': 'f0cd914e5692dc8fad274dac6cac70658cbaf1b6634872fc6ca6c6c8e7f02fd2',
-        'HOST': 'ec2-23-21-224-106.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database',
     }
 }
 
