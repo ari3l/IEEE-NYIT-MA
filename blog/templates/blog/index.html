@@ -27,7 +27,7 @@
     <link href="{% static 'css/new-age.min.css' %}" rel="stylesheet">
 
     <link href="{% static 'fullcalendar.css' %}" rel='stylesheet' />
-    <link href="{% static 'fullcalendar.print.css'' %}" rel='stylesheet' media='print' />
+    <link href="{% static 'fullcalendar.print.css' %}" rel='stylesheet' media='print' />
     <script src="{% static 'fullcalendar.min.js' %}"></script>
 
   </head>
@@ -190,29 +190,31 @@
     </section>
 <section>
     <div class="container" id='calendar'>
-        <div id='calendar' style="
-                                background-color: rgba(255,255,255,0.2);
-                                width: 900px;
-                margin: 0 auto;
-                padding-top: 100px;
-                margin-top: 50px;
-                margin-bottom:0px;
-                height: auto;"></div>
+{#        <div id='calendar' style="#}
+{#                                background-color: rgba(255,255,255,0.2);#}
+{#                                width: 900px;#}
+{#                margin: 0 auto;#}
+{#                padding-top: 100px;#}
+{#                margin-top: 50px;#}
+{#                margin-bottom:0px;#}
+{#                height: auto;"></div>#}
+{##}
+{#                <div id="fullCalModal" class="modal fade" >#}
+{#                    <div class="modal-dialog" >#}
+{#                            <div class="modal-content">#}
+{#                                 <div class="modal-header">#}
+{#                                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>#}
+{#                                        <h4 id="modalTitle" class="modal-title"></h4><h6 id="modalStart"class="modal-title"></h6>#}
+{#                                 </div>#}
+{#                                <div id="modalBody" class="modal-body"></div>#}
+{#                                    <div class="modal-footer">#}
+{#                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>#}
+{#                                    </div>#}
+{#                            </div>#}
+{#                    </div>#}
+{#                </div>#}
+        <iframe src="https://calendar.google.com/calendar/embed?src=nyit.edu_jur9sqts48b15dra962meggijs%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-                <div id="fullCalModal" class="modal fade" >
-                    <div class="modal-dialog" >
-                            <div class="modal-content">
-                                 <div class="modal-header">
-                                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
-                                        <h4 id="modalTitle" class="modal-title"></h4><h6 id="modalStart"class="modal-title"></h6>
-                                 </div>
-                                <div id="modalBody" class="modal-body"></div>
-                                    <div class="modal-footer">
-                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                            </div>
-                    </div>
-                </div>
     </div>
 </section>
     <footer>
@@ -249,43 +251,43 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>
 <script class="cssdesk" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.0/fullcalendar.min.js" type="text/javascript"></script>
 
-<script>
-$(document).ready(function() {
-
-    $('#calendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'list,month,basicWeek,basicDay'
-      },
-
-      navLinks: true, // can click day/week names to navigate views
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-
-                {% for i in events %}
-        {
-          {% spaceless %}
-          title: '{{  i.title  }} ',
-          day: '{{   i.start.date}}',
-          //time:'{{i.start.time.hour |stringformat:"02d" }}:{{i.start.time.minute |stringformat:"02d" }}:{{i.start.time.minute |stringformat:"02d" }}:{{i.start.time.seconds |stringformat:"02d" }}',
-          start: '{{   i.start.date.year}}-{{   i.start.date.month|stringformat:"02d" }}-{{   i.start.date.day|stringformat:"02d"}}T{{i.start.time.hour |stringformat:"02d" }}:{{i.start.time.minute |stringformat:"02d" }}:{{i.start.time.second |stringformat:"02d" }}',
-          end: '{{   i.end.date.year}}-{{   i.end.date.month}}-{{   i.end.date.day|stringformat:"02d" }}',
-
-          description: '{{ i.desc |linebreaks}}',
-          {% endspaceless %}
-          backgroundColor: '{{i.color}}'
-        },
-                {% endfor %}
-      ],
-        
-
-    });
-
-  });
-
-</script>
+{#<script>#}
+{#$(document).ready(function() {#}
+{##}
+{#    $('#calendar').fullCalendar({#}
+{#      header: {#}
+{#        left: 'prev,next today',#}
+{#        center: 'title',#}
+{#        right: 'list,month,basicWeek,basicDay'#}
+{#      },#}
+{##}
+{#      navLinks: true, // can click day/week names to navigate views#}
+{#      editable: true,#}
+{#      eventLimit: true, // allow "more" link when too many events#}
+{#      events: [#}
+{##}
+{#                {% for i in events %}#}
+{#        {#}
+{#          {% spaceless %}#}
+{#          title: '{{  i.title  }} ',#}
+{#          day: '{{   i.start.date}}',#}
+{#          //time:'{{i.start.time.hour |stringformat:"02d" }}:{{i.start.time.minute |stringformat:"02d" }}:{{i.start.time.minute |stringformat:"02d" }}:{{i.start.time.seconds |stringformat:"02d" }}',#}
+{#          start: '{{   i.start.date.year}}-{{   i.start.date.month|stringformat:"02d" }}-{{   i.start.date.day|stringformat:"02d"}}T{{i.start.time.hour |stringformat:"02d" }}:{{i.start.time.minute |stringformat:"02d" }}:{{i.start.time.second |stringformat:"02d" }}',#}
+{#          end: '{{   i.end.date.year}}-{{   i.end.date.month}}-{{   i.end.date.day|stringformat:"02d" }}',#}
+{##}
+{#          description: '{{ i.desc |linebreaks}}',#}
+{#          {% endspaceless %}#}
+{#          backgroundColor: '{{i.color}}'#}
+{#        },#}
+{#                {% endfor %}#}
+{#      ],#}
+{#        #}
+{##}
+{#    });#}
+{##}
+{#  });#}
+{##}
+{#</script>#}
 
 
 
